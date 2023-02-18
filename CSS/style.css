@@ -1,0 +1,452 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #fefecf;
+    --second-color: #fcd753;
+    --third-color: rgb(255, 255, 255, .5);
+    --fourth-color: #FF4C29;
+}
+
+body {
+    font-family: "cairo", sans-serif;
+    position: relative;
+    scroll-behavior: smooth;
+    background: linear-gradient(var(--main-color), #fadc71);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+
+    width: 90%;
+    padding: 0 15px;
+    /* background-color: black; */
+}
+
+header .container {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header .container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+header .container ul li {
+    list-style: none;
+}
+
+header .container ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+header .container ul li a:hover {
+    color: var(--second-color);
+}
+
+header .Hblock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.land {
+    width: 90%;
+    height: calc(100vh - 63px);
+    /* background-color: var(--second-color); */
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+
+}
+
+.land::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 200px);
+    background-color: var(--second-color);
+    border-radius: 30px;
+    z-index: -1;
+
+}
+
+.land::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 150px;
+    background-color: black;
+    bottom: 35px;
+    left: 10%;
+    border-radius: 30px;
+    opacity: .1;
+
+
+}
+
+.land header {
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.land header span {
+    color: white;
+}
+
+.land .container {
+    width: 90%;
+    height: calc(100vh - 200px);
+    background-color: var(--third-color);
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    z-index: 1;
+    padding: 80px 0;
+    backdrop-filter: blur(10px);
+
+
+}
+
+.land .container .left h1 {
+    padding-left: 40px;
+    color: #18329b;
+    word-spacing: 5px;
+}
+
+.land .container .left p {
+    padding-left: 40px;
+    font-size: 20px;
+    color: bla;
+    opacity: .5;
+    word-spacing: 5px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.land .container .left .block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+
+.land .container .left .block div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #f9fcda;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.land .container .left .block div img {
+    width: 80px;
+    transition: .3s;
+
+
+}
+
+.land .container .left .block div:hover img {
+    width: 90px;
+}
+
+.land .container .left .block .b1 img {
+    transform: rotate(75deg);
+}
+
+.land .container .left .block .b2 img {
+    transform: rotate(-15deg);
+}
+
+.land .container .left .block .b3 img {
+
+    transform: rotateY(180deg);
+}
+
+.land .container .mid {
+    border-radius: 50%;
+    background-color: transparent;
+    border-top: 5px solid var(--second-color);
+    border-bottom: 5px solid var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.land .container .mid .content {
+
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background-color: #f9fcda;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+/* .land .container .mid .content .image {
+    position: relative;
+    box-shadow: 0px 20px 0px #18329b;
+    transform: rotate(15deg);
+}
+
+.land .container .mid .content .image::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 20px;
+    background-color: var(--second-color);
+    right: 50px;
+    bottom: -10px;
+    transform: rotate(5deg);
+    border-radius: 0 40% 0 0;
+    backdrop-filter: blur(20px);
+    opacity: .2;
+} */
+
+.land .container .content:hover img {
+    transform: scale(1.1);
+}
+
+.land .container .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 40px;
+}
+
+.land .container .right i {
+    color: #ffc800;
+}
+
+.land .container .right .block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.land .container .right .block .c {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px #8e8e8e;
+}
+
+.land .container .right .block .c:hover {
+    transform: scale(1.2);
+
+}
+
+.land .container .right .block .c1 {
+    background-color: rgb(170, 15, 15);
+    border: 3px solid #ffcc01;
+    box-shadow: 0 0 10px #ffcc01;
+}
+
+.land .container .right .block .c2 {
+    background-color: rgb(242, 255, 0);
+}
+
+.land .container .right .block .c3 {
+    background-color: rgb(4, 0, 255);
+}
+
+.land .container .right .block .c4 {
+    background-color: aqua;
+}
+
+.land .container .right .size {
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.land .container .right .block .s {
+    width: 62px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 15px;
+    padding: 5px;
+    background-color: #f9fcda;
+    cursor: pointer;
+    box-shadow: 0 0 8px #8e8e8e;
+}
+
+.land .container .right .block .s:hover {
+    background-color: var(--second-color);
+}
+
+.land button {
+    width: 70%;
+    height: 70px;
+    background-color: black;
+    color: #f9fcda;
+    border-radius: 20px;
+    margin-top: 30px;
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.land button:hover {
+    background-color: #f9fcda;
+    color: black;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.section .container .box img {
+    width: 150px;
+    transform: rotate(30deg);
+    position: absolute;
+    top: 28%;
+    left: 33%;
+}
+
+.section .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+    padding: 100px 40px;
+    overflow: hidden;
+}
+
+.section .container .box {
+    position: relative;
+    background-color: var(--third-color);
+    height: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 1s;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+}
+
+.section .container .box .icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section .container .box .shape {
+    width: 90%;
+    height: 100px;
+    background-color: black;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+
+.section .container .box .shape .circle {
+    width: 45%;
+    height: 150%;
+    background-color: var(--second-color);
+    margin: 0 27.5%;
+    margin-top: -7%;
+    border-radius: 50%;
+    border: 5px solid #f9fcda;
+}
+
+.section .container .box h3,
+.section .container .box p {
+    color: #18329b;
+}
+
+.section .container .b1 .shape {
+    background-color: rgb(170, 15, 15);
+}
+
+.section .container .b2 .shape {
+    background-color: #1ec55e;
+}
+
+.section .container .b3 .shape {
+    background-color: #18329b;
+}
+
+.section .container .b4 .shape {
+    background-color: #1fc5ac;
+}
+
+.section .container .b5 .shape {
+    background-color: #480a57;
+}
+
+.section .container .b6 .shape {
+    background-color: #FF4C29;
+}
+
+.section .container .left {
+    transform: translateX(-130%);
+}
+
+.section .container .right {
+    transform: translateX(130%);
+}
+
+.section .container .show {
+    transform: translateX(0%);
+    opacity: 1;
+}
